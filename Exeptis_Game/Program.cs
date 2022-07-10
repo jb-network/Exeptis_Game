@@ -9,7 +9,6 @@ int PlayerTurn = 1;
 (string Player1, string Player2, bool Player1Turn) player;
 
 
-
 //Game Setup
 Random random = new Random();
 OatmealCookie = random.Next(0, 10);
