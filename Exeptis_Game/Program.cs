@@ -41,11 +41,8 @@ public class GameVars
         Console.WriteLine("Press any key to start the game");
         Console.ReadKey();
         Console.Clear();
-
     }
-       
-
-    internal void PlayRound(string player1, string player2, bool player1Turn, bool gameOn, List<int> numberTracker, int RandomCookieNumber)
+     internal void PlayRound(string player1, string player2, bool player1Turn, bool gameOn, List<int> numberTracker, int RandomCookieNumber)
     {
         string PlayerName;
         bool GameLoop = false;
@@ -73,7 +70,6 @@ public class GameVars
                 GameOn = false;
                 break;
             }
-
             if (!IsPresent)
             {
                 Console.WriteLine("\nThe number you guessed, has not been guessed during this game");
