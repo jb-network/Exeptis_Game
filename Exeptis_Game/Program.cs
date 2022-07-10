@@ -8,8 +8,10 @@
 Random random = new Random();
 int OatmealCookie = random.Next(1, 11);
 GameVars SetVars = new GameVars();
+//Sets player names
 SetVars.SetPlayers();
 
+// plays each round
 while (SetVars.GameOn == true) SetVars.PlayRound(SetVars.Player1, SetVars.Player2, SetVars.Player1Turn, SetVars.GameOn, SetVars.NumberTracker, OatmealCookie);
 
 public class GameVars
@@ -47,6 +49,7 @@ public class GameVars
         string PlayerName;
         bool GameLoop = false;
 
+        //Checking to see which player name to set
         if (Player1Turn == true) PlayerName = player1;
         else PlayerName = player2;
 
@@ -90,7 +93,7 @@ public class GameVars
             }
         } while (GameLoop == true);
         
-        //Set to next player
+        //Set to next player, inverts setting on the way back up
         if (player1Turn == true) Player1Turn = false;
         else Player1Turn = true;
     }
